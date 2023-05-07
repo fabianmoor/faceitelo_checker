@@ -1,21 +1,27 @@
 {
-  "name": "faceit-elo-checker",
+  "name": "your-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Your Electron Application",
+  "main": "main.js", 
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "electron": "^24.2.0",
-    "python-shell": "^5.0.0"
+  "build": {
+    "appId": "com.example.app",
+    "productName": "Your App Name",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis" 
+    }
   },
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
-    "webpack": "^5.82.0",
-    "webpack-cli": "^5.0.2"
+    "electron": "^15.2.0",
+    "electron-builder": "^22.13.1"
   }
 }
